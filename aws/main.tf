@@ -1,18 +1,5 @@
 # Configure the Amazon AWS Provider
 provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
-  region     = var.region
-}
-
-variable "aws_access_key" {
-  default     = "xxx"
-  description = "Amazon AWS Access Key"
-}
-
-variable "aws_secret_key" {
-  default     = "xxx"
-  description = "Amazon AWS Secret Key"
 }
 
 variable "prefix" {
