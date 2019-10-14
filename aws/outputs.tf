@@ -27,7 +27,8 @@ output "k8s_master_auth_cluster_ca_certificate" {
 output "environment" {
   value = "${var.environment}"
 }
-
+*/
+  
 output "vault_user" {
   value = "${var.vault_user}"
 }
@@ -35,4 +36,4 @@ output "vault_user" {
 output "vault_addr" {
   value = "${var.vault_addr}"
 }
-*/
+
