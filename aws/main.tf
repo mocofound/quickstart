@@ -264,5 +264,5 @@ output "rancher-url" {
 }
 
 output "rancher-server-userdata" {
-  value = base64decode([data.template_cloudinit_config.rancherserver-cloudinit.rendered])
+  value = ${base64decode([data.template_cloudinit_config.rancherserver-cloudinit.rendered])}
 }
