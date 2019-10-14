@@ -263,6 +263,6 @@ output "rancher-url" {
   value = ["https://${aws_instance.rancherserver.public_ip}"]
 }
 
-output "rancher-server-userdata" {
-  value = ${base64decode(data.template_cloudinit_config.rancherserver-cloudinit.rendered)}
-}
+#output "rancher-server-userdata" {
+#  value = ${base64decode(data.template_cloudinit_config.rancherserver-cloudinit.rendered)}
+#}
