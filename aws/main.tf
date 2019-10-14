@@ -147,7 +147,9 @@ resource "aws_instance" "rancheragent-all" {
   user_data       = data.template_cloudinit_config.rancheragent-all-cloudinit[count.index].rendered
 
   tags = {
-    Name = "${var.prefix}-rancheragent-${count.index}-all"
+    "Name" = "${var.prefix}-rancheragent-${count.index}-all"
+    "owner" = "${var.aws_owner}"
+    "TTL" = "${var.aws_TTL}"
   }
 }
 
@@ -228,7 +230,9 @@ resource "aws_instance" "rancheragent-worker" {
   user_data       = data.template_cloudinit_config.rancheragent-worker-cloudinit[count.index].rendered
 
   tags = {
-    Name = "${var.prefix}-rancheragent-${count.index}-worker"
+    "Name" = "${var.prefix}-rancheragent-${count.index}-all"
+    "owner" = "${var.aws_owner}"
+    "TTL" = "${var.aws_TTL}"
   }
 }
 
